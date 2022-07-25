@@ -1,1 +1,3 @@
-<strong>Let's play on weekends and study on weekdays</strong> : )
+<strong>play on weekends 
+
+study on weekdays</strong>
