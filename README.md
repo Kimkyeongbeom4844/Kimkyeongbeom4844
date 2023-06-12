@@ -25,7 +25,7 @@ const user:User = {
     'Recoil',
     'ReduxToolKit',
     'Pinia',
-    'Express'
+    'Express',
   ],
 } 
 ```
