@@ -17,6 +17,8 @@ const user:User = {
   university : 'Jeju National University.',
   major : 'Computer Engineering',
   skill : [
+    'Html',
+    'Css',
     'JavaScript',
     'TypeScript',
     'Next',
