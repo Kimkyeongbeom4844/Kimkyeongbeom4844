@@ -2,14 +2,14 @@
 // introduce.ts
 'use strict'
 
-type User = {
+interface User {
   name : string;
   introduce : string;
   university : string;
   major : string;
   skill : string[];
   etc ?: any;
-}
+};
 
 const user:User = {
   name : 'Kim Kyeong Beom',
@@ -29,5 +29,5 @@ const user:User = {
     'Pinia',
     'Express',
   ],
-} 
+};
 ```
