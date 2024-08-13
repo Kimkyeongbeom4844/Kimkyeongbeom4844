@@ -17,9 +17,6 @@ const user:User = {
   university : 'Jeju National University.',
   major : 'Computer Engineering',
   skill : [
-    'Html',
-    'Css',
-    'JavaScript',
     'TypeScript',
     'Next',
     'Nuxt',
@@ -28,6 +25,7 @@ const user:User = {
     'ReduxToolKit',
     'Pinia',
     'Express',
+    'Docker',
   ],
 };
 ```
