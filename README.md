@@ -17,6 +17,7 @@ const user:User = {
   university : 'Jeju National University.',
   major : 'Computer Engineering',
   skill : [
+    'ES6',
     'TypeScript',
     'Next',
     'Nuxt',
@@ -24,8 +25,12 @@ const user:User = {
     'Recoil',
     'ReduxToolKit',
     'Pinia',
-    'Express',
+    'Vuex',
+    'Prisma',
     'Docker',
+    'MySQL',
+    'PostgreSQL',
+    'TanstackQuery',
   ],
 };
 ```
