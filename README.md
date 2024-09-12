@@ -31,6 +31,9 @@ const user:User = {
     'MySQL',
     'PostgreSQL',
     'TanstackQuery',
+    'TailwindCSS',
+    'Bootstrap',
+    'JQuery',
   ],
 };
 ```
