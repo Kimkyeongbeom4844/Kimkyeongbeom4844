@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #050505;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+body {
+}

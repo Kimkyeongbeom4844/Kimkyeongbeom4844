@@ -1,0 +1,7 @@
+.black_button {
+  @apply bg-black text-white py-2 px-3 rounded-md text-xs hover:cursor-pointer hover:bg-opacity-80;
+}
+
+.red_button {
+  @apply bg-[#e16259] border border-[#be5643] shadow-sm text-white py-2 px-3 rounded-md text-xs hover:cursor-pointer hover:bg-opacity-80;
+}
