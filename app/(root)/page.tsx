@@ -14,8 +14,6 @@ import futureScienTechLogo from "@/app/assets/futureScienTech.png";
 import kantarKoreaLogo from "@/app/assets/kantarKorea.png";
 import mintmediaLogo from "@/app/assets/mintmedia.png";
 import fanslikeLogo from "@/app/assets/fanslike.png";
-import toontraLogo from "@/app/assets/toontra.png";
-import voicePickLogo from "@/app/assets/voicepick.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { addComponent } from "../store/reducers/backdrop";
 
@@ -39,7 +37,7 @@ export default function Home() {
    * @author kyeongbeom
    */
   useEffect(() => {
-    function windowScrollEvent(e: Event) {
+    function windowScrollEvent() {
       if (headerRef.current !== null) {
         if (window.scrollY >= headerRef.current.offsetHeight) {
           headerRef.current.style.borderBottom = "1px solid rgba(0,0,0,0.1)";
