@@ -15,12 +15,34 @@ import kantarKoreaLogo from "@/app/assets/kantarKorea.png";
 import mintmediaLogo from "@/app/assets/mintmedia.png";
 import fanslikeLogo from "@/app/assets/fanslike.png";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { addComponent } from "../store/reducers/backdrop";
+import { addComponent, removeComponent } from "../store/reducers/backdrop";
 
 export default function Home() {
   const dispatch = useDispatch();
 
   const headerRef = useRef<HTMLElement>(null);
+  const mainRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    /**
+     * 스크롤이 헤더의 offsetHeight보다 높을 때 border를 온오프하는 useEffect
+     * @author kyeongbeom
+     */
+    function windowScrollEvent() {
+      if (headerRef.current !== null) {
+        if (window.scrollY >= headerRef.current.offsetHeight) {
+          headerRef.current.classList.add("border-b");
+        } else {
+          headerRef.current.classList.remove("border-b");
+        }
+      }
+    }
+    window.addEventListener("scroll", windowScrollEvent);
+
+    return () => {
+      window.removeEventListener("scroll", windowScrollEvent);
+    };
+  }, []);
 
   /**
    * 헤더의 offsetHeight의 값을 headerStore에 저장하는 useEffect
@@ -32,25 +54,27 @@ export default function Home() {
     }
   }, [headerRef]);
 
-  /**
-   * 스크롤이 헤더의 offsetHeight보다 높을 때 border를 온오프하는 useEffect
-   * @author kyeongbeom
-   */
   useEffect(() => {
-    function windowScrollEvent() {
-      if (headerRef.current !== null) {
-        if (window.scrollY >= headerRef.current.offsetHeight) {
-          headerRef.current.style.borderBottom = "1px solid rgba(0,0,0,0.1)";
-        } else {
-          headerRef.current.style.borderBottom = "";
+    if (mainRef.current !== null) {
+      /**
+       * section태그에 IntersectionObserver 효과 추가
+       * @author kyeongbeom
+       */
+      const intersectionObserver = new IntersectionObserver(function (entries) {
+        for (let i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting === true) {
+            entries[i].target.classList.add(styles["show"]);
+          } else {
+            entries[i].target.classList.remove(styles["show"]);
+          }
         }
+      });
+
+      for (let i = 0; i < mainRef.current.children.length; i++) {
+        intersectionObserver.observe(mainRef.current.children[i]);
       }
     }
-    window.addEventListener("scroll", windowScrollEvent);
-    return () => {
-      window.removeEventListener("scroll", windowScrollEvent);
-    };
-  }, []);
+  }, [mainRef]);
 
   function openNewTab({
     href,
@@ -69,7 +93,7 @@ export default function Home() {
     <div className="flex flex-col">
       <header
         ref={headerRef}
-        className="flex items-center justify-between sticky top-0 bg-white py-5 mx-5"
+        className="flex items-center justify-between sticky top-0 bg-white py-5 mx-5 z-[1]"
       >
         <div className="flex items-center gap-x-7">
           <div
@@ -111,17 +135,17 @@ export default function Home() {
           }
         />
       </header>
-      <main className="container *:mb-12">
-        <section id="소개">
+      <main ref={mainRef} className="container *:min-h-[100vh] *:opacity-0">
+        <section id="소개" className="pt-24">
           <div className="flex gap-5 lg:flex-col-reverse items-center justify-between">
             <div className="flex basis-1/2">
               <div className="flex flex-col gap-y-5 items-start lg:items-center lg:text-center">
                 <h2 className="text-4xl font-bold text-balance">
-                  모든 팀을 위한 경범의 워크스페이스
+                  모든 팀을 위한 경범의 포트폴리오
                 </h2>
                 <p>
-                  <strong>Kyeongbeom</strong>은 단순한 워드프로세서가 아닙니다.
-                  내 스타일에 맞게 커스텀해서 사용하세요
+                  <strong>Kyeongbeom</strong>은 단순한 개발자가 아닙니다. 팀
+                  스타일에 맞게 커스텀해서 사용하세요
                 </p>
                 <button
                   className={styles["red_button"]}
@@ -133,8 +157,8 @@ export default function Home() {
                 >
                   Github 방문하기
                 </button>
-                <p className="text-xs">Kyeongbeom을 사용하는 파트너</p>
-                <ul className="flex *:basis-1/4 self-stretch lg:justify-center items-center gap-5 flex-wrap">
+                <p className="text-xs">Kyeongbeom에게 도움받은 파트너</p>
+                <ul className="flex *:basis-1/4 self-stretch lg:justify-center items-center gap-5 flex-wrap *:flex *:justify-center">
                   <li>
                     <Image
                       src={ideaconcertLogo}
@@ -219,13 +243,15 @@ export default function Home() {
             <Image src={kbJeans} alt="경범진스" />
           </div>
         </section>
-        <section id="프로젝트" className="bg-green-200 h-[100vh]">
-          프로젝트
+        <section id="프로젝트" className="bg-green-200">
+          <article>1</article>
+          <article>1</article>
+          <article>1</article>
         </section>
-        <section id="개인" className="bg-green-300  h-[100vh]">
+        <section id="개인" className="bg-green-300 ">
           개인
         </section>
-        <section id="댓글" className="bg-green-400  h-[100vh]">
+        <section id="댓글" className="bg-green-400">
           댓글
         </section>
       </main>

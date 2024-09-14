@@ -5,3 +5,19 @@
 .red_button {
   @apply bg-[#e16259] border border-[#be5643] shadow-sm text-white py-2 px-3 rounded-md text-xs hover:cursor-pointer hover:bg-opacity-80;
 }
+
+.show {
+  opacity: 1;
+  animation: show 1s ease-in;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 0.95;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
