@@ -246,84 +246,85 @@ export default function Home() {
           </div>
         </section>
         <section id="프로젝트">
-          <article className="flex lg:flex-col-reverse gap-14">
-            <div className="basis-1/2 border rounded-md overflow-hidden">
-              <Image src={playconProject} alt="플레이콘" />
-            </div>
-            <div className="basis-1/2 flex flex-col items-start">
-              <Image src={penguin} alt="펭귄" />
-              <code className="bg-slate-100 text-sm p-2 rounded-md *:my-2">
-                <div className="!indent-0 !text-slate-400 !mb-5">
-                  {"// package.json"}
-                </div>
-                <div className="!indent-0 text-yellow-600">{"{"}</div>
-                <div className="flex gap-2 ml-4">
-                  <span className="text-blue-400">{`"name"`}</span>{" "}
-                  <span>:</span>
-                  <span className="text-green-600">{`"플레이콘 홈페이지"`}</span>
-                </div>
-                <div className="flex gap-2 ml-4">
-                  <span className="text-blue-400">{`"description"`}</span>
-                  <span>:</span>
-                  <span className="text-green-600">
-                    {`"웹툰제작 및 웹툰과 관련된 기술을 개발하는 회사, 플레이콘의 메인홈페이지 프론트엔드 파트를 전반적으로 맡아서 작업했습니다. 디자인 시안은 zeplin으로 제공이 되었고, 메인 페이지의 회사위치를 알려주는 지도를 나타내기 위해 kakao에서 제공하는 map API를 활용하여 표현하였고, 중간지점의 history섹션의 리스트를 자동적으로 좌우슬라이드 효과를 주기위하여 swiper라이브러리를 적용하였습니다. 또한 프로젝트의 전반적인 반응형breakpoint 설정을 tailwind.config.ts에서 설정하여 보다 효율적으로 반응형 웹을 구현하였습니다."`}
-                  </span>
-                </div>
-                <div className="flex gap-2 ml-4">
-                  <span className="text-blue-400">{`"Language"`}</span>{" "}
-                  <span>:</span>
-                  <span className="text-green-600">{`"Typescript"`}</span>
-                </div>
-                <div className="flex gap-2 ml-4">
-                  <span className="text-blue-400">{`"Framework"`}</span>{" "}
-                  <span>:</span>
-                  <span className="text-green-600">{`"React"`}</span>
-                </div>
-                <div className="flex gap-2 ml-4">
-                  <span className="text-blue-400">{`"Library"`}</span>{" "}
-                  <span>:</span>
-                  <span className="text-green-600 flex flex-col">
-                    <span>{"{"}</span>
-                    <span className="ml-4">{`"tailwindcss",`}</span>
-                    <span className="ml-4">{`"react-hook-form",`}</span>
-                    <span className="ml-4">{`"swiper",`}</span>
-                    <span className="ml-4">{`"react-kakao-maps-sdk",`}</span>
-                    <span>{"}"}</span>
-                  </span>
-                </div>
-                <div className="flex gap-2 ml-4">
-                  <span className="text-blue-400">{`"Api"`}</span>{" "}
-                  <span>:</span>
-                  <span className="text-green-600">{`"KakaoAPI"`}</span>
-                </div>
+          <h2 className="flex lg:flex-col items-center gap-3 text-balance my-12">
+            <span className="text-4xl font-bold">프로젝트</span>
+            <span className="text-2xl"> - 플레이콘 홈페이지</span>
+          </h2>
+          <article className="flex lg:flex-col gap-14">
+            <Image
+              className="basis-1/2 border rounded-md overflow-hidden"
+              src={playconProject}
+              alt="플레이콘"
+            />
+            <code className="basis-1/2 overflow-auto self-stretch bg-slate-100 text-sm p-2 rounded-md *:my-2">
+              <div className="!indent-0 !text-slate-400 !mb-5">
+                {"// package.json"}
+              </div>
+              <div className="!indent-0 text-yellow-600">{"{"}</div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"name"`}</span> <span>:</span>
+                <span className="text-green-600">{`"플레이콘 홈페이지"`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"description"`}</span>
+                <span>:</span>
+                <span className="text-green-600">
+                  {`"웹툰제작 및 웹툰과 관련된 기술을 개발하는 회사, 플레이콘의 메인홈페이지 프론트엔드 파트를 전반적으로 맡아서 작업했습니다. 디자인 시안은 zeplin으로 제공이 되었고, 메인 페이지의 회사위치를 알려주는 지도를 나타내기 위해 kakao에서 제공하는 map API를 활용하여 표현하였고, 중간지점의 history섹션의 리스트를 자동적으로 좌우슬라이드 효과를 주기위하여 swiper라이브러리를 적용하였습니다. 또한 프로젝트의 전반적인 반응형breakpoint 설정을 tailwind.config.ts에서 설정하여 보다 효율적으로 반응형 웹을 구현하였습니다."`}
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Language"`}</span>{" "}
+                <span>:</span>
+                <span className="text-green-600">{`"Typescript"`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Framework"`}</span>{" "}
+                <span>:</span>
+                <span className="text-green-600">{`"React"`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Library"`}</span>{" "}
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"{"}</span>
+                  <span className="ml-4">{`"tailwindcss",`}</span>
+                  <span className="ml-4">{`"react-hook-form",`}</span>
+                  <span className="ml-4">{`"swiper",`}</span>
+                  <span className="ml-4">{`"react-kakao-maps-sdk",`}</span>
+                  <span>{"}"}</span>
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Api"`}</span> <span>:</span>
+                <span className="text-green-600">{`"KakaoAPI"`}</span>
+              </div>
 
-                <div className="flex gap-2 ml-4">
-                  <span className="text-blue-400">{`"Repository"`}</span>{" "}
-                  <span>:</span>
-                  <span
-                    className="text-green-600 hover:font-bold cursor-pointer hover:underline"
-                    onClick={() =>
-                      openNewTab({
-                        href: "https://gitlab.com/ideaconcert-dev/playconweb",
-                      })
-                    }
-                  >{`"https://gitlab.com/ideaconcert-dev/playconweb"`}</span>
-                </div>
-                <div className="flex gap-2 ml-4">
-                  <span className="text-blue-400">{`"Domain"`}</span>{" "}
-                  <span>:</span>
-                  <span
-                    className="text-green-600 hover:font-bold cursor-pointer hover:underline"
-                    onClick={() =>
-                      openNewTab({
-                        href: "https://playcon.kr/",
-                      })
-                    }
-                  >{`"https://playcon.kr/"`}</span>
-                </div>
-                <div className="!indent-0 text-yellow-600">{"}"}</div>
-              </code>
-            </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Repository"`}</span>{" "}
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://gitlab.com/ideaconcert-dev/playconweb",
+                    })
+                  }
+                >{`"https://gitlab.com/ideaconcert-dev/playconweb"`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Domain"`}</span>{" "}
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://playcon.kr/",
+                    })
+                  }
+                >{`"https://playcon.kr/"`}</span>
+              </div>
+              <div className="!indent-0 text-yellow-600">{"}"}</div>
+            </code>
           </article>
           <article>1</article>
           <article>1</article>
