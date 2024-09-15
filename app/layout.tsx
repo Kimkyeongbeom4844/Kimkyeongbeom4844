@@ -14,11 +14,12 @@ export const metadata: Metadata = {
     "Noti**의 메인 디자인에 영감을 받아 비슷하게 만든 Kyeongbeom의 포트폴리오",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log(123);
   return (
     <html lang="en">
       <body className={NotoSansKr.className}>
