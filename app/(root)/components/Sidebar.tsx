@@ -13,7 +13,10 @@ export default function Sidebar() {
       )}
     >
       <LinkList title="소개" />
-      <LinkList title="프로젝트" />
+      <LinkList
+        title="프로젝트"
+        list={["아이디어콘서트 채용페이지", "플레이콘 홈페이지"]}
+      />
       <LinkList title="개인" />
       <LinkList title="댓글" />
     </ul>

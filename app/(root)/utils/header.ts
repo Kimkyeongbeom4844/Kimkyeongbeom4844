@@ -1,4 +1,4 @@
-export function moveToSection({
+export function moveToId({
   id,
   scrollMarginTop,
 }: {
@@ -6,6 +6,7 @@ export function moveToSection({
   scrollMarginTop: number;
 }) {
   const elem = document.getElementById(id);
+  console.log(id, elem);
   if (elem !== null) {
     elem.style.scrollMarginTop = `${scrollMarginTop}px`;
     elem.scrollIntoView({
