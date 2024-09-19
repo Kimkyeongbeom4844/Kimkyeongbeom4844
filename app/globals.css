@@ -5,6 +5,7 @@
 
 :root {
   color: #050505;
+  user-select: none;
 }
 
 @media (prefers-color-scheme: dark) {
