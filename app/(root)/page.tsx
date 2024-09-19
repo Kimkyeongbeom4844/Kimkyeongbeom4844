@@ -18,6 +18,10 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { addComponent } from "../store/reducers/backdrop";
 import playconProject from "@/app/assets/playcon_project.png";
 import ideaconcertProject from "@/app/assets/ideaconcert_project.png";
+import futureScienTechProject from "@/app/assets/futureScienTech_project.png";
+import voicepickProject from "@/app/assets/voicepick_project.png";
+import kantarKoreaProject from "@/app/assets/kantarKorea_project.png";
+import imagetalkProject from "@/app/assets/imagetalk_project.png";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -111,10 +115,17 @@ export default function Home() {
             <p className="font-bold text-lg">Kyeongbeom</p>
           </div>
           <ul className="flex lg:hidden ">
-            <LinkList title="소개" />
+            {/* <LinkList title="소개" /> */}
             <LinkList
               title="프로젝트"
-              list={["아이디어콘서트 채용페이지", "플레이콘 홈페이지"]}
+              list={[
+                "아이디어콘서트 채용페이지",
+                "플레이콘 홈페이지",
+                "퓨처사이언테크 홈페이지 & 기술소개페이지",
+                "보이스픽",
+                "형태소분석기",
+                "이미지톡",
+              ]}
             />
             <LinkList title="개인" />
             <LinkList title="댓글" />
@@ -270,39 +281,39 @@ export default function Home() {
               <div className="!indent-0 text-yellow-600">{"{"}</div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"name"`}</span> <span>:</span>
-                <span className="text-green-600">{`"아이디어콘서트 홈페이지"`}</span>
+                <span className="text-green-600">{`"아이디어콘서트 홈페이지",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"description"`}</span>
                 <span>:</span>
                 <span className="text-green-600">
-                  {`"이 프로젝트는 디자인 시안 없이 퍼블리싱이 완료된 상태로 나와 기능적으로만 살을 붙이기만 하면 되었던 프토젝트였습니다. 저는 처음에 react를 써서 진행을하려고 했었는데 당시 팀장님께서 vue를 사용하면 react랑 다르게 html 부분을 수정할 필요 없이 전부 복사해서 붙여넣기만 해도 된다며 vue를 쓰는게 해당 프로젝트에 맞는것 같다며 vue로 세팅해서 진행하라고 말씀주셨습니다. 마침 사내에 vite기반 vue 보일러플레이트가 마련되어 있어 해당 레포지토리의 코드를 기반으로 진행했습니다. vue를 사용해보지는 않았지만, react와 비슷하면서도 오히려 state선언 및 변경, 상태감지 등의 부분이 react보다 쉬웠다는 느낌을 받아 빠르게 vue에 적응했습니다. 프로젝트가 거의 마무리 될때쯤 대표님께서 국내에 거주하는 웹툰작가들 뿐만이 아닌 해외웹툰작가도 모집을 하고 싶다고 언급을 하셔서 vue에서 지원하는 vue-18n을 이용하여 다국어 작업을 진행하였습니다. 해당 작업을 위해 페이지 오른쪽 상단부분에 language 셀렉트 버튼을 추가적으로 작업하였습니다. 또한 전역적으로 유저가 고른 언어셋으로 나타나야되서 vue의 상태관리 라이브러리인 vuex를 도입하여 i18n 다국어 작업 맟 스피너 등 전역적으로 필요한 상태관리를 처리하였습니다."`}
+                  {`"이 프로젝트는 디자인 시안 없이 퍼블리싱이 완료된 상태로 나와 기능적으로만 살을 붙이기만 하면 되었던 프토젝트였습니다. 저는 처음에 react를 써서 진행을하려고 했었는데 당시 팀장님께서 vue를 사용하면 react랑 다르게 html 부분을 수정할 필요 없이 전부 복사해서 붙여넣기만 해도 된다며 vue를 쓰는게 해당 프로젝트에 맞는것 같다며 vue로 세팅해서 진행하라고 말씀주셨습니다. 마침 사내에 vite기반 vue 보일러플레이트가 마련되어 있어 해당 레포지토리의 코드를 기반으로 진행했습니다. vue를 사용해보지는 않았지만, react와 비슷하면서도 오히려 state선언 및 변경, 상태감지 등의 부분이 react보다 쉬웠다는 느낌을 받아 빠르게 vue에 적응했습니다. 프로젝트가 거의 마무리 될때쯤 대표님께서 국내에 거주하는 웹툰작가들 뿐만이 아닌 해외웹툰작가도 모집을 하고 싶다고 언급을 하셔서 vue에서 지원하는 vue-18n을 이용하여 다국어 작업을 진행하였습니다. 해당 작업을 위해 페이지 오른쪽 상단부분에 language 셀렉트 버튼을 추가적으로 작업하였습니다. 또한 전역적으로 유저가 고른 언어셋으로 나타나야되서 vue의 상태관리 라이브러리인 vuex를 도입하여 i18n 다국어 작업 맟 스피너 등 전역적으로 필요한 상태관리를 처리하였습니다.",`}
                 </span>
               </div>
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Language"`}</span>{" "}
+                <span className="text-blue-400">{`"Language"`}</span>
                 <span>:</span>
-                <span className="text-green-600">{`"Javascript"`}</span>
+                <span className="text-green-600">{`"Javascript",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Framework"`}</span>{" "}
+                <span className="text-blue-400">{`"Framework"`}</span>
                 <span>:</span>
-                <span className="text-green-600">{`"Vue"`}</span>
+                <span className="text-green-600">{`"Vue",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Library"`}</span>{" "}
+                <span className="text-blue-400">{`"Library"`}</span>
                 <span>:</span>
                 <span className="text-green-600 flex flex-col">
-                  <span>{"{"}</span>
+                  <span>{"["}</span>
                   <span className="ml-4">{`"vuex",`}</span>
                   <span className="ml-4">{`"vue-i18n",`}</span>
                   <span className="ml-4">{`"sanitize-html",`}</span>
-                  <span className="ml-4">{`"aos",`}</span>
-                  <span>{"}"}</span>
+                  <span className="ml-4">{`"aos"`}</span>
+                  <span>{"],"}</span>
                 </span>
               </div>
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Repository"`}</span>{" "}
+                <span className="text-blue-400">{`"Repository"`}</span>
                 <span>:</span>
                 <span
                   className="text-green-600 hover:font-bold cursor-pointer hover:underline"
@@ -311,19 +322,19 @@ export default function Home() {
                       href: "https://gitlab.com/ideaconcert-dev/employment_front",
                     })
                   }
-                >{`"https://gitlab.com/ideaconcert-dev/employment_front"`}</span>
+                >{`"https://gitlab.com/ideaconcert-dev/employment_front",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Domain"`}</span>{" "}
+                <span className="text-blue-400">{`"Domain"`}</span>
                 <span>:</span>
                 <span
                   className="text-green-600 hover:font-bold cursor-pointer hover:underline"
                   onClick={() =>
                     openNewTab({
-                      href: "https://ideaconcert.art/",
+                      href: "https://ideaconcert.art",
                     })
                   }
-                >{`"https://ideaconcert.art/"`}</span>
+                >{`"https://ideaconcert.art",`}</span>
               </div>
               <div className="!indent-0 text-yellow-600">{"}"}</div>
             </code>
@@ -345,44 +356,44 @@ export default function Home() {
               <div className="!indent-0 text-yellow-600">{"{"}</div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"name"`}</span> <span>:</span>
-                <span className="text-green-600">{`"플레이콘 홈페이지"`}</span>
+                <span className="text-green-600">{`"플레이콘 홈페이지",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"description"`}</span>
                 <span>:</span>
                 <span className="text-green-600">
-                  {`"웹툰제작 및 웹툰과 관련된 기술을 개발하는 회사, 플레이콘의 메인홈페이지 프론트엔드 파트를 전반적으로 맡아서 작업했습니다. 디자인 시안은 zeplin으로 제공이 되었고, 메인 페이지의 회사위치를 알려주는 지도를 나타내기 위해 kakao에서 제공하는 map API를 활용하여 표현하였고, 중간지점의 history섹션의 리스트를 자동적으로 좌우슬라이드 효과를 주기위하여 swiper라이브러리를 적용하였습니다. 또한 프로젝트의 전반적인 반응형breakpoint 설정을 tailwind.config.ts에서 설정하여 보다 효율적으로 반응형 웹을 구현하였습니다."`}
+                  {`"웹툰제작 및 웹툰과 관련된 기술을 개발하는 회사, 플레이콘의 메인홈페이지 프론트엔드 파트를 전반적으로 맡아서 작업했습니다. 디자인 시안은 zeplin으로 제공이 되었고, 메인 페이지의 회사위치를 알려주는 지도를 나타내기 위해 kakao에서 제공하는 map API를 활용하여 표현하였고, 중간지점의 history섹션의 리스트를 자동적으로 좌우슬라이드 효과를 주기위하여 swiper라이브러리를 적용하였습니다. 또한 프로젝트의 전반적인 반응형breakpoint 설정을 tailwind.config.ts에서 설정하여 보다 효율적으로 반응형 웹을 구현하였습니다.",`}
                 </span>
               </div>
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Language"`}</span>{" "}
+                <span className="text-blue-400">{`"Language"`}</span>
                 <span>:</span>
-                <span className="text-green-600">{`"Typescript"`}</span>
+                <span className="text-green-600">{`"Typescript",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Framework"`}</span>{" "}
+                <span className="text-blue-400">{`"Framework"`}</span>
                 <span>:</span>
-                <span className="text-green-600">{`"React"`}</span>
+                <span className="text-green-600">{`"React",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Library"`}</span>{" "}
+                <span className="text-blue-400">{`"Library"`}</span>
                 <span>:</span>
                 <span className="text-green-600 flex flex-col">
-                  <span>{"{"}</span>
+                  <span>{"["}</span>
                   <span className="ml-4">{`"tailwindcss",`}</span>
                   <span className="ml-4">{`"react-hook-form",`}</span>
                   <span className="ml-4">{`"swiper",`}</span>
-                  <span className="ml-4">{`"react-kakao-maps-sdk",`}</span>
-                  <span>{"}"}</span>
+                  <span className="ml-4">{`"react-kakao-maps-sdk"`}</span>
+                  <span>{"],"}</span>
                 </span>
               </div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"Api"`}</span> <span>:</span>
-                <span className="text-green-600">{`"KakaoAPI"`}</span>
+                <span className="text-green-600">{`"KakaoAPI",`}</span>
               </div>
 
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Repository"`}</span>{" "}
+                <span className="text-blue-400">{`"Repository"`}</span>
                 <span>:</span>
                 <span
                   className="text-green-600 hover:font-bold cursor-pointer hover:underline"
@@ -391,19 +402,354 @@ export default function Home() {
                       href: "https://gitlab.com/ideaconcert-dev/playconweb",
                     })
                   }
-                >{`"https://gitlab.com/ideaconcert-dev/playconweb"`}</span>
+                >{`"https://gitlab.com/ideaconcert-dev/playconweb",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
-                <span className="text-blue-400">{`"Domain"`}</span>{" "}
+                <span className="text-blue-400">{`"Domain"`}</span>
                 <span>:</span>
                 <span
                   className="text-green-600 hover:font-bold cursor-pointer hover:underline"
                   onClick={() =>
                     openNewTab({
-                      href: "https://playcon.kr/",
+                      href: "https://playcon.kr",
                     })
                   }
-                >{`"https://playcon.kr/"`}</span>
+                >{`"https://playcon.kr"`}</span>
+              </div>
+              <div className="!indent-0 text-yellow-600">{"}"}</div>
+            </code>
+          </div>
+        </section>
+        <section id="퓨처사이언테크 홈페이지 & 기술소개페이지">
+          <span className="bg-slate-100 py-1 px-2 rounded-md">프로젝트</span>
+          <h2 className="text-4xl font-bold mt-3 mb-5">
+            퓨처사이언테크 홈페이지 & 기술소개페이지
+          </h2>
+          <div className="flex lg:flex-col gap-12 lg:gap-5">
+            <Image
+              className="basis-1/2 border rounded-md overflow-hidden"
+              src={futureScienTechProject}
+              alt="퓨처사이언테크 홈페이지 & 기술소개페이지"
+            />
+            <code className="basis-1/2 overflow-auto self-stretch bg-slate-100 text-sm p-2 rounded-md *:my-2">
+              <div className="!indent-0 !text-slate-400 !mb-5">
+                {"// package.json"}
+              </div>
+              <div className="!indent-0 text-yellow-600">{"{"}</div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"name"`}</span> <span>:</span>
+                <span className="text-green-600">{`"퓨처사이언테크 홈페이지 & 기술소개페이지",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"description"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"...",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Language"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"Typescript",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Framework"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"Next",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Library"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span className="ml-4">{`"tailwindcss",`}</span>
+                  <span className="ml-4">{`"@reduxjs/toolkit"`}</span>
+                  <span>{"],"}</span>
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"CI / CD"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span className="ml-4">{`"gitlab-ci",`}</span>
+                  <span className="ml-4">{`"docker"`}</span>
+                  <span>{"],"}</span>
+                </span>
+              </div>
+
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Repository"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span
+                    className="text-green-600 hover:font-bold cursor-pointer hover:underline ml-4"
+                    onClick={() =>
+                      openNewTab({
+                        href: "https://gitlab.com/ideaconcert-dev/futurescience",
+                      })
+                    }
+                  >{`"https://gitlab.com/ideaconcert-dev/futurescience",`}</span>
+                  <span
+                    className="text-green-600 hover:font-bold cursor-pointer hover:underline ml-4"
+                    onClick={() =>
+                      openNewTab({
+                        href: "https://gitlab.com/ideaconcert-dev/idea-tech-next",
+                      })
+                    }
+                  >{`"https://gitlab.com/ideaconcert-dev/idea-tech-next"`}</span>
+                  <span>{"]"}</span>
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Domain"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span
+                    className="text-green-600 hover:font-bold cursor-pointer hover:underline ml-4"
+                    onClick={() =>
+                      openNewTab({
+                        href: "https://futurescientech.com",
+                      })
+                    }
+                  >{`"https://futurescientech.com",`}</span>
+                  <span
+                    className="text-green-600 hover:font-bold cursor-pointer hover:underline ml-4"
+                    onClick={() =>
+                      openNewTab({
+                        href: "https://tech.futurescientech.com",
+                      })
+                    }
+                  >{`"https://tech.futurescientech.com"`}</span>
+                  <span>{"]"}</span>
+                </span>
+              </div>
+              <div className="!indent-0 text-yellow-600">{"}"}</div>
+            </code>
+          </div>
+        </section>
+        <section id="보이스픽">
+          <span className="bg-slate-100 py-1 px-2 rounded-md">프로젝트</span>
+          <h2 className="text-4xl font-bold mt-3 mb-5">보이스픽</h2>
+          <div className="flex lg:flex-col gap-12 lg:gap-5">
+            <Image
+              className="basis-1/2 border rounded-md overflow-hidden"
+              src={voicepickProject}
+              alt="보이스픽"
+            />
+            <code className="basis-1/2 overflow-auto self-stretch bg-slate-100 text-sm p-2 rounded-md *:my-2">
+              <div className="!indent-0 !text-slate-400 !mb-5">
+                {"// package.json"}
+              </div>
+              <div className="!indent-0 text-yellow-600">{"{"}</div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"name"`}</span> <span>:</span>
+                <span className="text-green-600">{`"보이스픽",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"description"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"RTK Query씀",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Language"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"Javascript",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Framework"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"React",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Library"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span className="ml-4">{`"swiper",`}</span>
+                  <span className="ml-4">{`"@reduxjs/toolkit"`}</span>
+                  <span>{"],"}</span>
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"CI / CD"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span className="ml-4">{`"gitlab-ci",`}</span>
+                  <span className="ml-4">{`"docker"`}</span>
+                  <span>{"]"}</span>
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Repository"`}</span>
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://gitlab.com/ideaconcert-dev/mintmedia",
+                    })
+                  }
+                >{`"https://gitlab.com/ideaconcert-dev/mintmedia",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Domain"`}</span>
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://voicepick.kr",
+                    })
+                  }
+                >{`"https://voicepick.kr"`}</span>
+              </div>
+              <div className="!indent-0 text-yellow-600">{"}"}</div>
+            </code>
+          </div>
+        </section>
+        <section id="형태소분석기">
+          <span className="bg-slate-100 py-1 px-2 rounded-md">프로젝트</span>
+          <h2 className="text-4xl font-bold mt-3 mb-5">형태소분석기</h2>
+          <div className="flex lg:flex-col gap-12 lg:gap-5">
+            <Image
+              className="basis-1/2 border rounded-md overflow-hidden"
+              src={kantarKoreaProject}
+              alt="형태소분석기"
+            />
+            <code className="basis-1/2 overflow-auto self-stretch bg-slate-100 text-sm p-2 rounded-md *:my-2">
+              <div className="!indent-0 !text-slate-400 !mb-5">
+                {"// package.json"}
+              </div>
+              <div className="!indent-0 text-yellow-600">{"{"}</div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"name"`}</span> <span>:</span>
+                <span className="text-green-600">{`"형태소분석기",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"description"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"기존 jquery로 구현되있는 코드 유지보수 및 형태소분석기 기능 추가",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Language"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"Javascript",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Framework"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"React",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Library"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span className="ml-4">{`"jquery",`}</span>
+                  <span className="ml-4">{`"read-excel-file",`}</span>
+                  <span className="ml-4">{`"generate-csv-from-array",`}</span>
+                  <span className="ml-4">{`"react-wordcloud"`}</span>
+                  <span>{"],"}</span>
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Repository"`}</span>
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://github.com/Kimkyeongbeom4844/kantar_KTA",
+                    })
+                  }
+                >{`"https://github.com/Kimkyeongbeom4844/kantar_KTA",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Domain"`}</span>
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://www.k-textanalyzer.co.kr/",
+                    })
+                  }
+                >{`"https://www.k-textanalyzer.co.kr/"`}</span>
+              </div>
+              <div className="!indent-0 text-yellow-600">{"}"}</div>
+            </code>
+          </div>
+        </section>
+        <section id="이미지톡">
+          <span className="bg-slate-100 py-1 px-2 rounded-md">프로젝트</span>
+          <h2 className="text-4xl font-bold mt-3 mb-5">이미지톡</h2>
+          <div className="flex lg:flex-col gap-12 lg:gap-5">
+            <Image
+              className="basis-1/2 border rounded-md overflow-hidden"
+              src={imagetalkProject}
+              alt="이미지톡"
+            />
+            <code className="basis-1/2 overflow-auto self-stretch bg-slate-100 text-sm p-2 rounded-md *:my-2">
+              <div className="!indent-0 !text-slate-400 !mb-5">
+                {"// package.json"}
+              </div>
+              <div className="!indent-0 text-yellow-600">{"{"}</div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"name"`}</span> <span>:</span>
+                <span className="text-green-600">{`"이미지톡",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"description"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"기존 jquery로 구현되있는 코드 유지보수 및 형태소분석기 기능 추가",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Language"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"Javascript",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Framework"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"React",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Library"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span className="ml-4">{`"jquery",`}</span>
+                  <span className="ml-4">{`"read-excel-file",`}</span>
+                  <span className="ml-4">{`"generate-csv-from-array",`}</span>
+                  <span className="ml-4">{`"react-wordcloud"`}</span>
+                  <span>{"],"}</span>
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Repository"`}</span>
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://github.com/Kimkyeongbeom4844/kantar_KTA",
+                    })
+                  }
+                >{`"https://github.com/Kimkyeongbeom4844/kantar_KTA",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Domain"`}</span>
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://imagetalk.kr",
+                    })
+                  }
+                >{`"https://imagetalk.kr"`}</span>
               </div>
               <div className="!indent-0 text-yellow-600">{"}"}</div>
             </code>
