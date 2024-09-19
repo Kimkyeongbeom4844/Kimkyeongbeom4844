@@ -32,12 +32,12 @@ export default function LinkList({
   useEffect(() => {
     if (ulRef.current !== null) {
       console.log(
-        Number((tailwindconfig.theme?.screens as any).lg.max.replace("px", ""))
+        Number((tailwindconfig.theme as any).screens.lg.max.replace("px", ""))
       );
       console.log(window.innerWidth);
       if (
         window.innerWidth <=
-        Number((tailwindconfig.theme?.screens as any).lg.max.replace("px", ""))
+        Number((tailwindconfig.theme as any).screens.lg.max.replace("px", ""))
       ) {
         ulRef.current.style.left = `-${ulRef.current.offsetWidth}px`;
       } else {
@@ -48,7 +48,7 @@ export default function LinkList({
 
   return (
     <li
-      className="hover:bg-slate-100 group flex items-center text-sm relative py-1 px-2 cursor-pointer rounded-md gap-x-1"
+      className="hover:bg-slate-100 group flex items-center text-sm relative py-2 px-3 cursor-pointer rounded-md gap-x-1"
       onClick={() => {
         if (list === undefined) {
           move({ id: title });
@@ -63,7 +63,7 @@ export default function LinkList({
             ref={ulRef}
             className={clsx(
               backdropStore.components.length === 0 ? "top-[100%]" : "top-0",
-              "absolute left-0 w-max invisible group-hover:visible bg-white border rounded-md p-1 z-[1] lg:top-0 *:py-1 *:px-2"
+              "absolute left-0 w-max invisible group-hover:visible bg-white border rounded-md p-1 z-[1] lg:top-0 *:py-2 *:px-3"
             )}
           >
             {list.map((elem, index) => (

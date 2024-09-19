@@ -21,7 +21,7 @@ export default memo(function Backdrop() {
     return () => {
       window.removeEventListener("keyup", windowKeydownEvent);
     };
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

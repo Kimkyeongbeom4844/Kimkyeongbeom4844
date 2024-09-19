@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: {
-  components: Promise<any>[];
+  components: Promise<React.ReactNode>[];
 } = {
   components: [],
 };
@@ -14,7 +14,7 @@ const backdropSlice = createSlice({
     removeComponent: (state) => {
       state.components.pop();
     },
-    addComponent: (state, action: PayloadAction<Promise<any>>) => {
+    addComponent: (state, action: PayloadAction<Promise<React.ReactNode>>) => {
       state.components.push(action.payload);
     },
   },
