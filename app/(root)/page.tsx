@@ -24,6 +24,7 @@ import kantarKoreaProject from "@/app/assets/kantarKorea_project.png";
 import imagetalkProject from "@/app/assets/imagetalk_project.png";
 import { FaSquareGitlab, FaSquareGithub, FaPhone } from "react-icons/fa6";
 import { IoMailSharp } from "react-icons/io5";
+import toontraProject from "@/app/assets/toontra_project.png";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -125,6 +126,7 @@ export default function Home() {
                 "퓨처사이언테크 홈페이지 & 기술소개페이지",
                 "보이스픽",
                 "형태소분석기",
+                "툰트라",
                 "이미지톡",
               ]}
             />
@@ -496,7 +498,7 @@ export default function Home() {
                       })
                     }
                   >{`"https://gitlab.com/ideaconcert-dev/idea-tech-next"`}</span>
-                  <span>{"]"}</span>
+                  <span>{"],"}</span>
                 </span>
               </div>
               <div className="flex gap-2 ml-4">
@@ -577,7 +579,7 @@ export default function Home() {
                   <span>{"["}</span>
                   <span className="ml-4">{`"gitlab-ci",`}</span>
                   <span className="ml-4">{`"docker"`}</span>
-                  <span>{"]"}</span>
+                  <span>{"],"}</span>
                 </span>
               </div>
               <div className="flex gap-2 ml-4">
@@ -676,6 +678,90 @@ export default function Home() {
                     })
                   }
                 >{`"https://www.k-textanalyzer.co.kr"`}</span>
+              </div>
+              <div className="!indent-0 text-yellow-600">{"}"}</div>
+            </code>
+          </div>
+        </section>
+        <section id="툰트라">
+          <span className="bg-slate-100 py-1 px-2 rounded-md">프로젝트</span>
+          <h2 className="text-4xl font-bold mt-3 mb-5">툰트라</h2>
+          <div className="flex lg:flex-col gap-12 lg:gap-5">
+            <Image
+              className="basis-1/2 border rounded-md overflow-hidden"
+              src={toontraProject}
+              alt="툰트라"
+            />
+            <code className="basis-1/2 overflow-auto self-stretch bg-slate-100 text-sm p-2 rounded-md *:my-2">
+              <div className="!indent-0 !text-slate-400 !mb-5">
+                {"// package.json"}
+              </div>
+              <div className="!indent-0 text-yellow-600">{"{"}</div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"name"`}</span> <span>:</span>
+                <span className="text-green-600">{`"툰트라",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"description"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"웹툰 파일 업로드 시 말풍선 내 텍스트 인식 및 자동번역 후 보정작업기능을 제공하는 툴",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Language"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"Typescript",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Framework"`}</span>
+                <span>:</span>
+                <span className="text-green-600">{`"Next",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Library"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span className="ml-4">{`"@webtoon/psd",`}</span>
+                  <span className="ml-4">{`"@reduxjs/toolkit",`}</span>
+                  <span className="ml-4">{`"@tanstack/react-query",`}</span>
+                  <span className="ml-4">{`"konva",`}</span>
+                  <span className="ml-4">{`"axios",`}</span>
+                  <span>{"],"}</span>
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"CI / CD"`}</span>
+                <span>:</span>
+                <span className="text-green-600 flex flex-col">
+                  <span>{"["}</span>
+                  <span className="ml-4">{`"gitlab-ci",`}</span>
+                  <span className="ml-4">{`"docker"`}</span>
+                  <span>{"],"}</span>
+                </span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Repository"`}</span>
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://gitlab.com/ideaconcert-dev/toontra-demo-next",
+                    })
+                  }
+                >{`"https://gitlab.com/ideaconcert-dev/toontra-demo-next",`}</span>
+              </div>
+              <div className="flex gap-2 ml-4">
+                <span className="text-blue-400">{`"Domain"`}</span>
+                <span>:</span>
+                <span
+                  className="text-green-600 hover:font-bold cursor-pointer hover:underline"
+                  onClick={() =>
+                    openNewTab({
+                      href: "https://demo.toontra.com",
+                    })
+                  }
+                >{`"https://demo.toontra.com"`}</span>
               </div>
               <div className="!indent-0 text-yellow-600">{"}"}</div>
             </code>
