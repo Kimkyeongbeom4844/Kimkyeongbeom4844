@@ -22,6 +22,8 @@ import futureScienTechProject from "@/app/assets/futureScienTech_project.png";
 import voicepickProject from "@/app/assets/voicepick_project.png";
 import kantarKoreaProject from "@/app/assets/kantarKorea_project.png";
 import imagetalkProject from "@/app/assets/imagetalk_project.png";
+import { FaSquareGitlab, FaSquareGithub, FaPhone } from "react-icons/fa6";
+import { IoMailSharp } from "react-icons/io5";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -87,7 +89,7 @@ export default function Home() {
     target = "_blank",
   }: {
     href: string;
-    target?: string;
+    target?: "_blank" | "_self" | "_parent" | "_top";
   }) {
     const $a = document.createElement("a");
     $a.href = href;
@@ -106,7 +108,7 @@ export default function Home() {
             className="flex items-center gap-x-1 cursor-pointer"
             onClick={() =>
               moveToId({
-                id: "소개",
+                id: "메인",
                 scrollMarginTop: headerRef.current?.offsetHeight as number,
               })
             }
@@ -115,7 +117,6 @@ export default function Home() {
             <p className="font-bold text-lg">Kyeongbeom</p>
           </div>
           <ul className="flex lg:hidden ">
-            {/* <LinkList title="소개" /> */}
             <LinkList
               title="프로젝트"
               list={[
@@ -127,8 +128,6 @@ export default function Home() {
                 "이미지톡",
               ]}
             />
-            <LinkList title="개인" />
-            <LinkList title="댓글" />
           </ul>
         </div>
         <ul className="flex lg:hidden">
@@ -153,10 +152,10 @@ export default function Home() {
       </header>
       <main
         ref={mainRef}
-        className="container *:opacity-0 flex flex-col gap-y-36"
+        className="container *:opacity-0 flex flex-col gap-y-36 mb-36"
       >
         <section
-          id="소개"
+          id="메인"
           className="min-h-screen flex lg:flex-col-reverse items-center justify-between lg:justify-around"
         >
           <div className="flex basis-1/2">
@@ -287,7 +286,7 @@ export default function Home() {
                 <span className="text-blue-400">{`"description"`}</span>
                 <span>:</span>
                 <span className="text-green-600">
-                  {`"이 프로젝트는 디자인 시안 없이 퍼블리싱이 완료된 상태로 나와 기능적으로만 살을 붙이기만 하면 되었던 프토젝트였습니다. 저는 처음에 react를 써서 진행을하려고 했었는데 당시 팀장님께서 vue를 사용하면 react랑 다르게 html 부분을 수정할 필요 없이 전부 복사해서 붙여넣기만 해도 된다며 vue를 쓰는게 해당 프로젝트에 맞는것 같다며 vue로 세팅해서 진행하라고 말씀주셨습니다. 마침 사내에 vite기반 vue 보일러플레이트가 마련되어 있어 해당 레포지토리의 코드를 기반으로 진행했습니다. vue를 사용해보지는 않았지만, react와 비슷하면서도 오히려 state선언 및 변경, 상태감지 등의 부분이 react보다 쉬웠다는 느낌을 받아 빠르게 vue에 적응했습니다. 프로젝트가 거의 마무리 될때쯤 대표님께서 국내에 거주하는 웹툰작가들 뿐만이 아닌 해외웹툰작가도 모집을 하고 싶다고 언급을 하셔서 vue에서 지원하는 vue-18n을 이용하여 다국어 작업을 진행하였습니다. 해당 작업을 위해 페이지 오른쪽 상단부분에 language 셀렉트 버튼을 추가적으로 작업하였습니다. 또한 전역적으로 유저가 고른 언어셋으로 나타나야되서 vue의 상태관리 라이브러리인 vuex를 도입하여 i18n 다국어 작업 맟 스피너 등 전역적으로 필요한 상태관리를 처리하였습니다.",`}
+                  {`"Vue의 composition API와 setup문법 기반 다국어 채용페이지",`}
                 </span>
               </div>
               <div className="flex gap-2 ml-4">
@@ -362,7 +361,7 @@ export default function Home() {
                 <span className="text-blue-400">{`"description"`}</span>
                 <span>:</span>
                 <span className="text-green-600">
-                  {`"웹툰제작 및 웹툰과 관련된 기술을 개발하는 회사, 플레이콘의 메인홈페이지 프론트엔드 파트를 전반적으로 맡아서 작업했습니다. 디자인 시안은 zeplin으로 제공이 되었고, 메인 페이지의 회사위치를 알려주는 지도를 나타내기 위해 kakao에서 제공하는 map API를 활용하여 표현하였고, 중간지점의 history섹션의 리스트를 자동적으로 좌우슬라이드 효과를 주기위하여 swiper라이브러리를 적용하였습니다. 또한 프로젝트의 전반적인 반응형breakpoint 설정을 tailwind.config.ts에서 설정하여 보다 효율적으로 반응형 웹을 구현하였습니다.",`}
+                  {`"React와 kakaomap API를 사용하여 만든 반응형 홈페이지",`}
                 </span>
               </div>
               <div className="flex gap-2 ml-4">
@@ -443,7 +442,7 @@ export default function Home() {
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"description"`}</span>
                 <span>:</span>
-                <span className="text-green-600">{`"...",`}</span>
+                <span className="text-green-600">{`"Next.js와 redux를 사용하여 제작한 홈페이지",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"Language"`}</span>
@@ -549,7 +548,7 @@ export default function Home() {
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"description"`}</span>
                 <span>:</span>
-                <span className="text-green-600">{`"RTK Query씀",`}</span>
+                <span className="text-green-600">{`"RTK Query를 활용한 응답데이터 캐싱을 적용한 React기반 프로젝트",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"Language"`}</span>
@@ -630,7 +629,7 @@ export default function Home() {
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"description"`}</span>
                 <span>:</span>
-                <span className="text-green-600">{`"기존 jquery로 구현되있는 코드 유지보수 및 형태소분석기 기능 추가",`}</span>
+                <span className="text-green-600">{`"기존 jQuery로 구현되있는 react프로젝트 유지보수 및 형태소분석기 기능 고도화",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"Language"`}</span>
@@ -673,10 +672,10 @@ export default function Home() {
                   className="text-green-600 hover:font-bold cursor-pointer hover:underline"
                   onClick={() =>
                     openNewTab({
-                      href: "https://www.k-textanalyzer.co.kr/",
+                      href: "https://www.k-textanalyzer.co.kr",
                     })
                   }
-                >{`"https://www.k-textanalyzer.co.kr/"`}</span>
+                >{`"https://www.k-textanalyzer.co.kr"`}</span>
               </div>
               <div className="!indent-0 text-yellow-600">{"}"}</div>
             </code>
@@ -703,7 +702,7 @@ export default function Home() {
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"description"`}</span>
                 <span>:</span>
-                <span className="text-green-600">{`"기존 jquery로 구현되있는 코드 유지보수 및 형태소분석기 기능 추가",`}</span>
+                <span className="text-green-600">{`"실시간적 요소에 필요한 websocket 및 webRTC, 그리고 firebase cloud message(FCM)기능을 도입한 vue기반의 메신저 웹서비스",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"Language"`}</span>
@@ -713,17 +712,19 @@ export default function Home() {
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"Framework"`}</span>
                 <span>:</span>
-                <span className="text-green-600">{`"React",`}</span>
+                <span className="text-green-600">{`"Vue",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"Library"`}</span>
                 <span>:</span>
                 <span className="text-green-600 flex flex-col">
                   <span>{"["}</span>
-                  <span className="ml-4">{`"jquery",`}</span>
-                  <span className="ml-4">{`"read-excel-file",`}</span>
-                  <span className="ml-4">{`"generate-csv-from-array",`}</span>
-                  <span className="ml-4">{`"react-wordcloud"`}</span>
+                  <span className="ml-4">{`"@webtoon/psd",`}</span>
+                  <span className="ml-4">{`"pinia",`}</span>
+                  <span className="ml-4">{`"firebase",`}</span>
+                  <span className="ml-4">{`"konva",`}</span>
+                  <span className="ml-4">{`"axios",`}</span>
+                  <span className="ml-4">{`"dayjs"`}</span>
                   <span>{"],"}</span>
                 </span>
               </div>
@@ -734,10 +735,10 @@ export default function Home() {
                   className="text-green-600 hover:font-bold cursor-pointer hover:underline"
                   onClick={() =>
                     openNewTab({
-                      href: "https://github.com/Kimkyeongbeom4844/kantar_KTA",
+                      href: "https://gitlab.com/ideaconcert-dev/toonmaker/-/tree/imagetalk?ref_type=heads",
                     })
                   }
-                >{`"https://github.com/Kimkyeongbeom4844/kantar_KTA",`}</span>
+                >{`"https://gitlab.com/ideaconcert-dev/toonmaker/-/tree/imagetalk?ref_type=heads",`}</span>
               </div>
               <div className="flex gap-2 ml-4">
                 <span className="text-blue-400">{`"Domain"`}</span>
@@ -763,7 +764,59 @@ export default function Home() {
         </section> */}
       </main>
       <footer className="border-t">
-        <div className="container">푸터</div>
+        <div className="container pt-10 pb-2">
+          <ul className="text-sm flex flex-col gap-2 mb-10 *:flex *:gap-3 *:items-center select-text items-start">
+            <li
+              className="cursor-pointer"
+              onClick={() =>
+                openNewTab({
+                  href: "https://github.com/Kimkyeongbeom4844",
+                })
+              }
+            >
+              <FaSquareGithub size={25} color="#050505" />
+              <p>https://github.com/Kimkyeongbeom4844</p>
+            </li>
+            <li
+              className="cursor-pointer"
+              onClick={() =>
+                openNewTab({
+                  href: "https://gitlab.com/xops09685",
+                })
+              }
+            >
+              <FaSquareGitlab size={25} color="#050505" />
+              <p>https://gitlab.com/xops09685</p>
+            </li>
+            <li
+              className="cursor-pointer"
+              onClick={() =>
+                openNewTab({
+                  href: "mailto:xops09685@gmail.com",
+                  target: "_self",
+                })
+              }
+            >
+              <IoMailSharp size={25} color="#050505" />
+              <p>xops09685@gmail.com</p>
+            </li>
+            <li
+              className="cursor-pointer"
+              onClick={() =>
+                openNewTab({
+                  href: "tel:01056894844",
+                  target: "_self",
+                })
+              }
+            >
+              <FaPhone size={25} color="#050505" />
+              <p>010-5689-4844</p>
+            </li>
+          </ul>
+          <p className="text-xs">
+            ©2024 kimkyeongbeom4844. All rights reserved.
+          </p>
+        </div>
       </footer>
     </div>
   );

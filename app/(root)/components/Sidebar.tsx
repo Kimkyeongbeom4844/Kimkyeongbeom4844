@@ -12,7 +12,6 @@ export default function Sidebar() {
         style["side_bar"]
       )}
     >
-      {/* <LinkList title="소개" /> */}
       <LinkList
         title="프로젝트"
         list={[
@@ -24,8 +23,6 @@ export default function Sidebar() {
           "이미지톡",
         ]}
       />
-      <LinkList title="개인" />
-      <LinkList title="댓글" />
     </ul>
   );
 }
